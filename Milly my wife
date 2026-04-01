@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hey You ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #ffe6e6;
+      padding-top: 100px;
+    }
+    h1 {
+      color: #d63384;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+    #yesBtn {
+      background-color: #28a745;
+      color: white;
+    }
+    #noBtn {
+      background-color: #dc3545;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Do you miss your husband? 😏</h1>
+
+<button id="yesBtn" onclick="yesClicked()">Yes ❤️</button>
+<button id="noBtn" onmouseover="moveNo()">No 🙄</button>
+
+<p id="message"></p>
+
+<script>
+function yesClicked() {
+  document.getElementById("message").innerHTML =
+    "I KNEW IT 😌❤️ You can't hide it! I miss you more though 🥺💖<br><br>I'm just one call away 📞";
+}
+
+function moveNo() {
+  let button = document.getElementById("noBtn");
+  let x = Math.random() * window.innerWidth * 0.8;
+  let y = Math.random() * window.innerHeight * 0.8;
+  button.style.left = x + "px";
+  button.style.top = y + "px";
+
+  document.getElementById("message").innerHTML =
+    "Hey hey 😆 why are you running? Just admit it!";
+}
+</script>
+
+</body>
+</html>
